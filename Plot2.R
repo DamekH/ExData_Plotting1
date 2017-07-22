@@ -4,7 +4,7 @@ all_data <- read.table("./household_power_consumption.txt", header = TRUE, sep =
 # Subset data by date
 subset_data <- all_data[all_data$Date %in% c("1/2/2007", "2/2/2007") , ]
 
-# Convert character vectors stroing dates and times into POSIXct format
+# Convert character vectors storing dates and times into POSIXct format
 date_time <- strptime(paste(subset_data$Date, subset_data$Time, sep = " "), "%d/%m/%Y %H:%M:%S")
 
 # Convert Global active power column to numeric vector
